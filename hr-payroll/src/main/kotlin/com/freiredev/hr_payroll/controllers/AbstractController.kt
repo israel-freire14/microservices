@@ -12,9 +12,4 @@ class AbstractController {
     @Autowired
     lateinit var paymentService: PaymentService
 
-    @Autowired
-    lateinit var restTemplate: RestTemplate
-
-    @Value("{hr-worker.host}")
-    lateinit var workerHost: String
 }

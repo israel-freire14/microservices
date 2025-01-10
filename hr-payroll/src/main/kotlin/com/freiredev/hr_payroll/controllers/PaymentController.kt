@@ -13,7 +13,6 @@ import kotlin.jvm.Throws
 @RequestMapping("/payments")
 class PaymentController: AbstractController(){
 
-
     @GetMapping("/{workerId}/days/{days}")
     fun getPayment(@PathVariable workerId: Long, @PathVariable days: Int): Payment{
         return paymentService.getPayment(workerId, days)
