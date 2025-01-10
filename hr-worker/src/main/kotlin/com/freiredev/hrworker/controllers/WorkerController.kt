@@ -18,6 +18,7 @@ class WorkerController: AbstractController() {
 
     @GetMapping("/{id}")
     fun getWorkerById(@PathVariable id: Long): Optional<Worker> {
+        logger.info("PORT = " + env.getProperty("local.server.port"))
         return workerService.getWorkerById(id)
     }
 
