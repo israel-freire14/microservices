@@ -23,14 +23,18 @@ configurations {
 repositories {
 	mavenCentral()
 }
-
-extra["springCloudVersion"] = "2023.0.4"
-
+//2022.0.0-RC2
+//2020.0.5
+extra["springCloudVersion"] = "2023.0.3"
+//:4.1.3
+//:2.2.10.RELEASE
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.1.3")
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign:3.0.5")
 	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j:3.0.1")
+	implementation("org.springframework.boot:spring-boot-starter-aop:3.4.1")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	compileOnly("org.projectlombok:lombok")

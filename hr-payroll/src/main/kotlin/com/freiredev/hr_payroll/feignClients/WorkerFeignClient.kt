@@ -12,5 +12,5 @@ import java.util.Optional
 interface WorkerFeignClient {
 
     @GetMapping("/{id}")
-    fun findWorkerById (@PathVariable id: Long): Optional<Worker>
+    fun findWorkerById(@PathVariable id: Long): Optional<Worker>
 }
