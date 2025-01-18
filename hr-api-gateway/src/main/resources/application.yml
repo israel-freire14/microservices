@@ -1,0 +1,27 @@
+# APPLICATION
+spring:
+  application:
+    name: hr-api-gateway
+  main:
+    web-application-type: reactive
+
+# SPRING CLOUD GATEWAY
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+# NETWORK
+server:
+  port: 8765
+
+# EUREKA
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+
+
