@@ -14,10 +14,9 @@ import lombok.Setter
 
 @Entity
 @Table(name = "tb_worker")
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
 data class Worker(
 
     @Id

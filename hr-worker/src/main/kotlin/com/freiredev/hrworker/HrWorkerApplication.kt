@@ -6,8 +6,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient
 
 @EnableDiscoveryClient
 @SpringBootApplication
-class HrworkerApplication
+class HrWorkerApplication
 
 fun main(args: Array<String>) {
-	runApplication<HrworkerApplication>(*args)
+	runApplication<HrWorkerApplication>(*args)
 }
