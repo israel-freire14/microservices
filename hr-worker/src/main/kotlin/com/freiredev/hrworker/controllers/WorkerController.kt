@@ -21,13 +21,13 @@ class WorkerController: AbstractController() {
 
     @GetMapping("/configs")
     fun getConfigs(): ResponseEntity<Unit>{
-        logger.info("CONFIG = " + testConfig)
+        logger.info("CONFIG = $testConfig")
         return ResponseEntity.noContent().build()
     }
 
     @GetMapping("/{id}")
     fun getWorkerById(@PathVariable id: Long): Optional<Worker> {
-        logger.info("PORT = " + env.getProperty("local.server.port"))
+        logger.info("PORT = ${env.getProperty("local.server.port")}")
         return workerService.getWorkerById(id)
     }
 

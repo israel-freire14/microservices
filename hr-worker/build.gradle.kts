@@ -28,6 +28,7 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.apache.logging.log4j:log4j-api")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
