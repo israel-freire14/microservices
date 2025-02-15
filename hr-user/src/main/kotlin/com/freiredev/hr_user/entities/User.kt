@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode
 import lombok.Getter
 import lombok.NoArgsConstructor
 import lombok.Setter
+import java.util.LinkedList
 
 @Entity
 @Table(name = "tb_user")
@@ -22,7 +23,7 @@ data class User(
     @Column(name = "user_name")
     val name: String,
 
-    @Column(name = "user_email")
+    @Column(name = "user_email", unique = true)
     val email: String,
 
     @Column(name = "user_password")
@@ -33,5 +34,5 @@ data class User(
                joinColumns = [JoinColumn(name = "user_id")],
                inverseJoinColumns = [JoinColumn(name = "role_access_id")]
     )
-    val authorizationRole: Set<Role>
+    val authorizationRole: Set<Role> = mutableSetOf()
 )

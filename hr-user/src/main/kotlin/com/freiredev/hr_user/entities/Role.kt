@@ -1,12 +1,7 @@
 package com.freiredev.hr_user.entities
 
 import com.freiredev.hr_user.config.AuthorizationTypeEnum
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import jakarta.persistence.*
 import lombok.AllArgsConstructor
 import lombok.Getter
 import lombok.Setter
@@ -23,6 +18,6 @@ data class Role(
     val id: Long,
 
     @Column(name = "user_role_authorization")
+    @Enumerated(EnumType.STRING)
     val roleAuthorization: AuthorizationTypeEnum
-
 )
